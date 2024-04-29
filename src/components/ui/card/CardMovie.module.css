@@ -1,0 +1,11 @@
+.cardMedia,
+.card {
+  margin: 3px;
+  width: 300px;
+  @media only screen and (min-width: 421px) and (max-width: 1024px) {
+    width: 200px;
+  }
+  @media only screen and (max-width: 420px) {
+    width: 150px;
+  }
+}

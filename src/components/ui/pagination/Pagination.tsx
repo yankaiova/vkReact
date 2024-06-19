@@ -1,3 +1,4 @@
+import style from "./Pagination.module.css";
 type props = {
   currentPage: number;
   totalPage: number;
@@ -21,34 +22,22 @@ export const Pagination = ({
   };
 
   return (
-    <div>
-      <button
-        style={{
-          backgroundColor: "black",
-          border: "1px solid white",
-          borderRadius: "5px",
-          color: "#fff",
-        }}
-        onClick={navigatePrev}
-      >
+    <div className={style.pagBlock}>
+      <button className={style.btnPagination} onClick={navigatePrev}>
         {"<"}
       </button>
       <span>
         {PAGES.map((item: number) => (
-          <span style={item === currentPage ? { color: "red" } : {}} key={item}>
+          <span
+            className={item === currentPage ? style.active : style.page}
+            key={item}
+            onClick={() => setCurrentPage(item)}
+          >
             {item}
           </span>
         ))}
       </span>
-      <button
-        onClick={navigateNext}
-        style={{
-          backgroundColor: "black",
-          border: "1px solid white",
-          borderRadius: "5px",
-          color: "#fff",
-        }}
-      >
+      <button onClick={navigateNext} className={style.btnPagination}>
         {">"}
       </button>
     </div>

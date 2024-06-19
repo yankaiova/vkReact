@@ -1,0 +1,17 @@
+style.btnPagination {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: #fff;
+}
+.pagBlock {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+.page {
+  cursor: pointer;
+}
+.active {
+  color: red;
+}

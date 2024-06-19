@@ -1,5 +1,4 @@
-import { SimilarMovies } from "../components/similar-movies/SimilarMovies";
-import { MovieDetail } from "../components/movie-detail/MovieDetail";
+import { MovieDetail } from "../components/ui/movie-detail/MovieDetail";
 import { IFilm } from "../model/types";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -18,7 +17,6 @@ export const MovieInfo = () => {
       {movie && (
         <div>
           <MovieDetail movie={movie} key={id} />
-          <SimilarMovies sMovies={movie.similarMovies} key={id} />
         </div>
       )}
     </>

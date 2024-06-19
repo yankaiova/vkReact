@@ -1,11 +1,12 @@
-import { BestMovies } from "../components/best-movies/BestMovies";
-import { Search } from "../components/search/Search";
-
+import { FilterListGroup } from "../components/filter/Filter";
+import { MoviesList } from "../components/list-movies/MoviesList";
+import { NavBar } from "../components/navBar/NavBar";
 export const HomePage = () => {
   return (
     <>
-      <Search />
-      <BestMovies />
+      <NavBar />
+      <FilterListGroup />
+      <MoviesList />
     </>
   );
 };
